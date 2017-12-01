@@ -10,7 +10,9 @@
 
   "image_name": "cyberdojofoundation/kotlin_kotlintest",
 
-  "filename_extension": ".kt",
+  "runner_choice": "stateless",
 
-  "runner_choice": "stateless"
+  "max_seconds": 20,
+
+  "filename_extension": ".kt"
 }
