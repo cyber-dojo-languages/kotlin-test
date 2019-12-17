@@ -2,7 +2,9 @@ services: docker
 language: bash
 
 script:
-    - SCRIPT=run_build_image.sh
-    - curl -O https://raw.githubusercontent.com/cyber-dojo-languages/image_builder/master/${SCRIPT}
-    - chmod +x ./${SCRIPT}
-    - travis_retry ./${SCRIPT} ${PWD}
+    - URL=https://raw.githubusercontent.com/cyber-dojo-languages/image_builder/master
+    - SCRIPT=build_test_push_notify.sh
+    - curl -O --fail ${URL}/${SCRIPT}
+    - chmod 700 ./${SCRIPT}
+    - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+    - travis_retry ./${SCRIPT}
