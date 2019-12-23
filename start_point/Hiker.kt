@@ -1,5 +1,5 @@
 package hiker
 
 fun answer():Int {
-    return 6 * 9
+    return 6 * 7
 }
