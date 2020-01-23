@@ -5,7 +5,8 @@
   "visible_filenames": [
     "HikerTest.kt",
     "Hiker.kt",
-    "cyber-dojo.sh"
+    "cyber-dojo.sh",
+    "hard-wired-test-name.txt"
   ],
 
   "image_name": "cyberdojofoundation/kotlin_kotlintest",
