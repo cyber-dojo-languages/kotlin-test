@@ -1,4 +1,4 @@
-// [X] See hard-wired-test-name.txt 
+// [X] See hard-wired.txt 
 
 package hiker /*[X]*/
 

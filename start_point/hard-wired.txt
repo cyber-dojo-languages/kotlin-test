@@ -13,5 +13,5 @@ cyber-dojo.sh appropriately.
 
 Note that cyber-dojo.sh uses the option [--writer basic]
 which writes red/green terminal colour codes to the output.
-These don't render properly in a browser and there appears
+These don't render properly in a plain textarea and there appears
 to be no way to turn it off. Maybe you can help?

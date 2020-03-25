@@ -6,7 +6,7 @@
     "HikerTest.kt",
     "Hiker.kt",
     "cyber-dojo.sh",
-    "hard-wired-test-name.txt"
+    "hard-wired.txt"
   ],
 
   "image_name": "cyberdojofoundation/kotlin_kotlintest",
