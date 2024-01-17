@@ -1,4 +1,4 @@
-FROM cyberdojofoundation/kotlin:554d07d
+FROM cyberdojofoundation/kotlin:cf686cf
 LABEL maintainer=jon@jaggersoft.com
 
 COPY /jars/* /kotlin/
