@@ -1,4 +1,4 @@
-FROM cyberdojofoundation/kotlin:cf686cf
+FROM ghcr.io/cyber-dojo-languages/kotlin:e985dfc
 LABEL maintainer=jon@jaggersoft.com
 
 COPY /jars/* /kotlin/
