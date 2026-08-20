@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.cyber-dojo</groupId>
+  <artifactId>kotlin-kotest-jars</artifactId>
+  <version>1</version>
+  <packaging>pom</packaging>
+
+  <!-- Nothing is built from this pom. It exists so maven can resolve the test
+       framework's transitive closure and copy it into the image, which is what
+       keeps the jars themselves out of git and the versions in one place.
+
+       The console launcher tracks kotest's junit-platform version, not its own
+       newest release: kotest 6.2.4 uses platform 1.13.4, and the launcher has
+       a separate 6.x line that would not match it. -->
+
+  <properties>
+    <kotest.version>6.2.4</kotest.version>
+    <junit.platform.version>1.13.4</junit.platform.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.kotest</groupId>
+      <artifactId>kotest-runner-junit5-jvm</artifactId>
+      <version>${kotest.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.kotest</groupId>
+      <artifactId>kotest-assertions-core-jvm</artifactId>
+      <version>${kotest.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.kotest</groupId>
+      <artifactId>kotest-property-jvm</artifactId>
+      <version>${kotest.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-console-standalone</artifactId>
+      <version>${junit.platform.version}</version>
+    </dependency>
+  </dependencies>
+</project>

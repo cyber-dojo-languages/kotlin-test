@@ -1,5 +1,13 @@
-FROM ghcr.io/cyber-dojo-languages/kotlin:bc25304
+FROM ghcr.io/cyber-dojo-languages/kotlin:ad5c23a
 LABEL maintainer=jon@jaggersoft.com
 
-COPY /jars/* /kotlin/
+# maven resolves the jars named in pom.xml into /kotlin at build time. It and
+# the JDK it pulls in leave with the virtual package, so neither reaches the
+# final image.
+COPY pom.xml .
+RUN apk add --virtual=build-dependencies maven \
+  && mvn --batch-mode --quiet dependency:copy-dependencies -DoutputDirectory=/kotlin \
+  && apk del build-dependencies \
+  && rm -rf pom.xml ~/.m2 /tmp/* /var/cache/apk/*
+
 ENV CLASSPATH=/kotlin/
